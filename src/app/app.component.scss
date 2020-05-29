@@ -1,0 +1,10 @@
+.add-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+  margin: 1rem;
+}
