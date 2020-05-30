@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddCardDialogComponent } from './add-card-dialog/add-card-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'gridster-tutorial';
+
+  constructor(public dialog: MatDialog) { }
+
+  public addCard(): void {
+    const dialogRef = this.dialog.open(AddCardDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
+  }
 }
