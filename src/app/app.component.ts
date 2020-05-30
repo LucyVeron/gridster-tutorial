@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.options = {
       gridType: GridType.Fixed,
-      /* compactType: CompactType.CompactLeftAndUp, */
       displayGrid: DisplayGrid.None,
       fixedColWidth: 200,
       fixedRowHeight: 200,
@@ -33,7 +32,6 @@ export class AppComponent implements OnInit {
     dialogRef.afterClosed().subscribe((config: any) => {
       if (!config) { return; }
       this.dashboard.push({ config, cols: 1, rows: 1, y: 0, x: 0 });
-      console.log({ config, cols: 1, rows: 1, y: 0, x: 0 });
     });
   }
 }
