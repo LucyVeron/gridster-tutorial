@@ -4,9 +4,17 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-<div matRipple class="add-card">
+<div *ngIf="!dashboard.length" matRipple class="add-card">
   <div class="add-card-contents" (click)="addCard()">
     <h2>Add Card</h2>
     <mat-icon>add</mat-icon>
   </div>
 </div>
+
+<gridster *ngIf="dashboard.length" [options]="options">
+  <gridster-item [item]="item" *ngFor="let item of dashboard">
+    <div class="card-content">
+      <mat-icon color="{{item.config.color}}">{{item.config.icon.icon}}</mat-icon>
+    </div>
+  </gridster-item>
+</gridster>

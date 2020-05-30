@@ -1,1 +1,32 @@
-<p>add-card-dialog works!</p>
+<h2 mat-dialog-title>Add Card</h2>
+<mat-dialog-content>
+    <form>
+        <mat-form-field>
+            <mat-label>Icon</mat-label>
+            <mat-select [formControl]="icon">
+                <mat-select-trigger *ngIf="icon.value">{{icon.value.name}}</mat-select-trigger>
+                <mat-option *ngFor="let i of icons" [value]="i">
+                    <mat-icon>{{i.icon}}</mat-icon>
+                    <span>{{i.name}}</span>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <ng-container *ngIf="icon.value">
+            <label>Color</label>
+            <mat-radio-group [(ngModel)]="color" name="color">
+                <mat-radio-button *ngFor="let color of colors" [value]="color">
+                    {{color}}
+                </mat-radio-button>
+            </mat-radio-group>
+        </ng-container>
+        <div *ngIf="icon.value" class="preview">
+            <mat-icon *ngIf="icon && icon.value" color="{{color}}">
+                {{icon.value.icon}}
+            </mat-icon>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" (click)="addCard()">Add</button>
+</mat-dialog-actions>
