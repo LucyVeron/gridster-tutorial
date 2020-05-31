@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GridsterModule } from 'angular-gridster2';
@@ -36,7 +37,8 @@ import { AppComponent } from './app.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTooltipModule
   ],
   entryComponents: [
     AddCardDialogComponent

@@ -19,7 +19,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.options = {
       gridType: GridType.Fixed,
-      displayGrid: DisplayGrid.None,
       fixedColWidth: 200,
       fixedRowHeight: 200,
       draggable: { enabled: true }

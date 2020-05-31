@@ -28,5 +28,5 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-raised-button color="primary" (click)="addCard()">Add</button>
+    <button mat-raised-button color="primary" [disabled]="!icon.value" (click)="addCard()">Add</button>
 </mat-dialog-actions>

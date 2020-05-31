@@ -6,13 +6,13 @@ mat-toolbar {
     flex: auto;
   }
 }
-.add-card {
+.add-panel {
   display: flex;
   padding-top: 150px;
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 100vh;
+  height: 77vh;
   &-contents {
     display: flex;
     flex-direction: column;
@@ -22,8 +22,7 @@ mat-toolbar {
   }
 }
 gridster {
-  background: transparent;
-  height: 90vh;
+  height: 93vh;
 }
 .card-content {
   position: relative;
@@ -39,4 +38,9 @@ gridster {
     top: 0;
     left: 0;
   }
+}
+.floating-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
